@@ -1,0 +1,183 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+      
+        body{
+            background: linear-gradient(to right, #005C98, #505BDA);
+            font-family: Arial, Helvetica, sans-serif ;
+            text-align: center;
+        
+        }
+        /* burbujas */
+
+.burbuja{
+    border-radius: 50%;
+    background: #fff;
+    opacity: .3;
+
+    position: absolute;
+    bottom: -150;
+    
+    animation: burbujas 3s linear infinite ;
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8){
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9){
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(30px);
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+    </style>
+<title>Contenido</title>
+</head>
+<body bgcolor="#fdfd96" >
+    <div>
+    <h2>ING. WILMER PATRICIO CALO PALLO</h2>
+    <h4>INFORMATICA APLICADA A LA EDUCACIÓN</h4>
+    <h2> ING. SANDRA MERCEDES CALDERÓN SANGOQUISA</h2>
+    <h4>MATEMATICAS SUPERIOR.</h4>
+    <h4>PROBLEMAS DEL MUNDO CONTEMPORÁNEO</h4>
+    <h2>LCDO. SANTIAGO JUAN CARLOS CASTAÑEDA QUINTO </h2>
+    <h4>HISTORIA.</h4>
+    <h4>SOCIOLOGÍA.</h4>
+    <h2>ING. MARIELA MARIBEL SÁNCHEZ LARA</h2>
+    <h4>EDUCACIÓN CÍVICA Y VALORES.</h4>
+    <h2> ING. MARÍA LUISA QUINTANA ARRIAGA</h2>
+    <h4>FÍSICA.</h4>
+    <h2>ING. ELVIS BOLIVAR ÁLVAREZ MERELO</h2>
+    <h4>MATEMATICAS.</h4>
+    <h2>LCDA. JENNY GUADALUPE CEDEÑO CEDEÑO.</h2>
+    <h4>INVESTIGACIÓN CIENTÍFICA.</h4>
+    <h2>ING. JORGE ARTURO TERÁN MONTERO</h2>
+    <h4>INGLÉS.</h4>
+    <h2>TLGO. EDISSON ROBERTO LOOR ZAMBRANO</h2>
+    <h4>QUÍMICA.</h4>
+    <h2>ING. JUAN DANILO URIÑA MANTILLA</h2>
+    <h4>DISEÑO DE PROYECTO.</h4>
+     <h4>LENGUA Y LITERATURA.</h4>
+    <h2>LCDO. FREDMAN JAVIER ESTUPIÑÁN CHILUIZA</h2>
+    <h4>BIOLOGÍA.</h4>
+   <h2>CPA. MARJORIE PRISCILA MELO ACOSTA</h2>
+    <h4>LECTURA CRÍTICA.</h4>
+    <h2>LCDO. ANTONIO YAMIL VARAS ANDRADE</h2>
+    <h4>EDUCACIÓN FÍSICA.</h4>
+    <h2>ING. ANA ASUNCI&Oacute;N MENDOZA GANCHOZO</h2>
+    <h4>EMPRENDIMIENTO Y GESTIÓN</h4>
+</div>
+<div class="burbujas">
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+</div>
+</body>
+</html>

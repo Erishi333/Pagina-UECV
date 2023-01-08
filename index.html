@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIDAD EDUCATIVA CIUDAD DE VALENCIA</title>
+    <script async src="https://api.countapi.xyz/hit/Proyecto.com/2ce668b7-5e13-4e4b-8afa-9a922549b19e?callback=websiteVisits"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <h2 class="nav__logo">U.E.C.V</h2>
+
+            <ul class="nav__list">
+                <li class="nav__item"><a href="Tarea 2-20221126T130035Z-001/Tarea 2/marco horizontal.html" class="nav__link">MARCO HORIZONTAL</a></li>
+                <li class="nav__item"><a href="marco vertical/marco vertical.html" class="nav__link">MARCO VERTICAL</a></li>
+                <li class="nav__item"><a href="informacion/informacion.html" class="nav__link">M&Aacute;S INFORMACION</a></li>
+                <li class="nav__item"><a href="info.html" class="nav__link">U.E.C.V</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero__main container">
+            <div class="hero__texts">
+                <h1 class="hero__title">¡Bienvenido!, Mi nombre es Erick</h1>
+                <a href="#" class="hero__cta">VISITAS <span id="visitasfunciona"></span></a>
+            </div>
+
+            <figure class="hero__picture">
+                <img src="images/sp.png" class="hero__img">
+            </figure>
+        </section>
+
+        <div style="height: 150px; overflow: hidden;" class="hero__waves" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C262.08,217.40 378.89,-120.09 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    </header>
+    <section class="modal">
+        <div class="modal__container">
+            <img src="images/modal.svg" class="modal__img" >
+            <h2 class="modal__title">¡Bienvenido al sitio!</h2>
+            <p class="modal__paragraph">Hola, bienvenido a mi pagina web :)</p>
+            <a href="#" class="modal__close">Cerrar</a>
+        </div>
+    </section>
+
+       
+         <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div> 
+     <script>
+        const openModal = document.querySelector('.hero__cta');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('.modal__close');
+
+openModal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.add('modal--show');
+});
+
+closeModal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.remove('modal--show');
+});
+
+        function websiteVisits(response) {
+        document.querySelector("#visitasfunciona").textContent = response.value;
+    }
+
+     </script>
+      
+  
+</body>
+</html>

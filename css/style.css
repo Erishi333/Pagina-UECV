@@ -1,0 +1,93 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+body{
+  font-family: 'Urbanist', sans-serif;
+  overflow: hidden;
+
+}
+.hero{
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  color: #fff;
+  display: grid;
+  grid-template-areas: 
+  "nav"
+  "content";
+
+}
+.container{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.nav{
+  grid-area: nav;
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  gap: 1em;
+  align-items: center;
+  height: 90px;
+}
+
+.nav__list{
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
+}
+
+.nav__link{
+  color:#fff;
+  text-decoration: none;
+}
+
+.nav__logo{
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.nav__menu{
+  display: none;
+}
+
+.nav__icon{
+  width: 30px;
+  
+}
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+
+
+  section
+  { text-align: justify;}
+  h1{color: #2a5298;}
+#customers{
+    width:350px; 
+    float:left;
+    width:100%;
+
+}
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+}
+
+p{
+  text-align: justify;
+  font-size: 12px;
+
+
+line-height :19px;
+}
+#boxes .box img{
+  width:90px;
+
+}
+#s1{ margin-left: 570px;
+}

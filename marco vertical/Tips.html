@@ -1,0 +1,183 @@
+<html>
+<head>
+    <title>tips</title>
+    <style>
+       body{
+background-color: aliceblue;
+}     
+.clock {
+  margin: 0px auto;
+  width: 150px;
+  height: 150px;
+  fill: black;
+}
+.outer-circle,
+.center-circle {
+  fill: darkslategray;
+}
+
+.hours,
+.minutes,
+.seconds {
+  transform-origin: center;
+  stroke-linecap: round;
+}
+
+.hours {
+  stroke: fuchsia;
+  stroke-width: 3px; 
+  transition: transform 1s ease-in-out;
+}
+.minutes {
+  stroke-width: 2px; 
+  stroke: lime;
+  transition: transform 1s ease-in-out;
+}
+.seconds {
+  stroke: white;
+}
+
+.line {
+  stroke-width: 1px;
+  stroke: white;
+  stroke-linecap: round;
+  transform-origin: center;
+}
+footer{
+  max-width: 1000px;
+  min-height: 130px;
+  background: aliceblue;
+  margin: 0 auto;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  font-size: 9px;
+  margin-top: 210px;
+}
+img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+        }
+   
+    </style>
+</head>
+<body>
+  <center>
+    <img src="PicsArt Photo Editor MOD_11-20-08.06.59.jpg">
+  </center>
+        <p align="center">Autor</p>
+     <p align="center"> <a href="biografia.html">R.Erick</a></p>
+      <center>
+        <table>
+          <tr>
+            <td>
+              <div class="clock">
+                <svg class="circle" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="60" cy="60" r="60" class="outer-circle"/>
+                  <circle cx="60" cy="60" r="57" />
+                  <line x1="60" y1="20" x2="60" y2="60" class="hours" />
+                  <line x1="60" y1="2" x2="60" y2="60" class="minutes" />
+                  <line x1="60" y1="0" x2="60" y2="60" class="seconds" />
+                  <circle cx="60" cy="60" r="3" class="center-circle" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                  <line x1="60" y1="5" x2="60" y2="10" class="line" />
+                </svg>
+              </div>
+              </center>
+                </td>
+              </tr>
+              <div style="float:right;">
+           <tr>
+            <td>
+                <center>
+                <script type="text/javascript">
+                  function startTime(){
+                  today=new Date();
+                  h=today.getHours();
+                  m=today.getMinutes();
+                  s=today.getSeconds();
+                  m=checkTime(m);
+                  s=checkTime(s);
+                  document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+                  t=setTimeout('startTime()',500);}
+                  function checkTime(i)
+                  {if (i<10) {i="0" + i;}return i;}
+                  window.onload=function(){startTime();}
+                  </script>
+                  <div id="reloj"></div>  
+                </center>
+              </td> 
+                </div>
+              </tr>
+              <tr>
+                
+                <td>
+                  <center>
+                  <script type="text/javascript">
+                    var date = new Date();
+                    var d  = date.getDate();
+                    var day = (d < 10) ? '0' + d : d;
+                    var m = date.getMonth() + 1;
+                    var month = (m < 10) ? '0' + m : m;
+                    var yy = date.getYear();
+                    var year = (yy < 1000) ? yy + 1900 : yy;
+                    document.write(day + "/" + month + "/" + year);
+                    </script>    
+                         </center>
+                        </td>       
+
+         <script>
+          (function () {
+    calculateLines();
+    setInterval(() => {
+     calculateHourDegrees();
+     calculateMinuteDegrees();
+     calculateSeconds();
+    }, 1000);
+  })();
+  
+  function linearMap(value, min, max, newMin, newMax) {
+      return newMin + (newMax - newMin) * (value - min) / (max - min);
+  }
+  
+  function calculateHourDegrees() {
+    const currentHour = new Date().getHours() - 12;
+    const angle = linearMap(currentHour, 0, 12, 0, 360);
+    document.querySelector(".hours").style.transform = `rotate(${angle}deg)`;
+  }
+  
+  function calculateMinuteDegrees() {
+    const currentMinutes = new Date().getMinutes();
+    const angle = linearMap(currentMinutes, 0, 60, 0, 360);
+    document.querySelector(".minutes").style.transform = `rotate(${angle}deg)`;
+  }
+  
+  function calculateSeconds() {
+    const currentMinutes = new Date().getSeconds();
+    const angle = linearMap(currentMinutes, 0, 60, 0, 360);
+    document.querySelector(".seconds").style.transform = `rotate(${angle}deg)`;
+  }
+  
+  function calculateLines() {
+    const lines = document.querySelectorAll(".line");
+    const numberLines = lines.length;
+    for (let i = 0; i < numberLines; i++) {
+      const line = lines[i];
+      const angle = linearMap(i, 0, numberLines, 0, 360);
+      line.style.transform = `rotate(${angle}deg)`;
+    }
+  }
+         </script>
+</body>  
+
+</html>
